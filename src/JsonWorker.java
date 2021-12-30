@@ -42,8 +42,7 @@ public class JsonWorker {
         JSONObject finaljsonObject = new JSONObject(); // {}
         JSONObject jsonObject = new JSONObject();;
         JSONArray jsonArray = new JSONArray();    // []
-        // Objektummal kezdünk, belerakom az Authort-t
-        // Utána tömbként kell hozáadnom a logolásokat
+
         List<String> done = new ArrayList(UsersList.size());
 
 
