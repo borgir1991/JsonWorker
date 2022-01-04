@@ -4,7 +4,6 @@ import java.io.File;
 public class Service extends JFrame{
 
     private JPanel Panel;
-    private static String jsondata;
 
     public Service(){
     setContentPane(Panel);
@@ -15,17 +14,19 @@ public class Service extends JFrame{
     }
     public static void main(String[] args){
     try {
-        Service service =  new Service();
+        Service service = new Service();
         File file = new File("c:\\00\\log.json");
 
-        jsondata=JsonWorker.JsnReader(file);
+        String jsondata = JsonWorker.JsnReader(file);
         JsonWorker.DataProcessing(jsondata);
+
         JsonWorker.LogWork();
+
 
 
     }catch (Exception e){
         e.printStackTrace();
-        JsonWorker.MessageBox("Nem adta ki: "+e.toString(),"Error");
+        JsonWorker.MessageBox("Nem adta ki: "+ e.toString(),"Error");
         }
     }
 
